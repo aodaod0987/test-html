@@ -1,14 +1,29 @@
-l
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>replit</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    Hello world
+    <h1>Hello <span id="name">world</span>!</h1>
+    <input type="text" id="newname" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#newname").keyup(function () {
+          $("#name").text($(this).val());
+        });
+      });
+    </script>
+
     <script src="script.js"></script>
   </body>
 </html>
